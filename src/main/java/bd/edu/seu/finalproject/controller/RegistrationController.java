@@ -14,7 +14,7 @@ public class RegistrationController {
 
     private StudentService studentService;
 
-    @PostMapping("/registration")
+    /*@PostMapping("/registration")
     public ResponseEntity<String> registerStudent(@RequestParam String email, @RequestParam String password) {
         try {
             studentService.registerStudent(email, password);
@@ -32,5 +32,5 @@ public class RegistrationController {
         } else {
             return ResponseEntity.status(401).body("Invalid email or password.");
         }
-    }
+    }*/
 }
