@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Class Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .schedule {
+            width: 90%;
+            max-width: 800px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header h2 {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .header h3 {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #999;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        thead th {
+            background-color: #ddd;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        tbody td {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+        }
+
+        .yellow {
+            background-color: #ffefcc;
+        }
+
+        .green {
+            background-color: #d5f5e3;
+        }
+
+        .blue {
+            background-color: #d6eaf8;
+        }
+
+        .pink {
+            background-color: #f9e0e6;
+        }
+
+        .purple {
+            background-color: #e8daef;
+        }
+    </style>
+</head>
+<body>
+<div class="schedule">
+    <div class="header">
+        <h1>COLLEGE CLASS</h1>
+        <h2>Schedules</h2>
+        <h3>1 Year</h3>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Time</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>7:00</td>
+            <td class="yellow">TECHNICAL SUBJECT</td>
+            <td></td>
+            <td class="green">SPORTS BREAK</td>
+            <td></td>
+            <td class="yellow">TECHNICAL SUBJECT</td>
+        </tr>
+        <tr>
+            <td>8:00</td>
+            <td></td>
+            <td class="green">HUMANITIES</td>
+            <td class="blue">MATHEMATICS</td>
+            <td class="green">HUMANITIES</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8:50</td>
+            <td class="green">SPORTS BREAK</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="pink">HISTORY</td>
+        </tr>
+        <tr>
+            <td>9:50</td>
+            <td class="green">HUMANITIES</td>
+            <td class="yellow">TECHNICAL SUBJECT</td>
+            <td></td>
+            <td></td>
+            <td class="blue">MATHEMATICS</td>
+        </tr>
+        <tr>
+            <td>11:00</td>
+            <td></td>
+            <td class="blue">MATHEMATICS</td>
+            <td class="purple">CHEMISTRY</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13:00</td>
+            <td class="pink">ART</td>
+            <td></td>
+            <td></td>
+            <td class="green">SPORT CLUB</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

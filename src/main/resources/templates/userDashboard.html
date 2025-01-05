@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEU LMS Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+<div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800">
+        <div class="p-2 flex items-center justify-center space-x-4">
+            <img class="h-10 rounded-full" src="https://thumbs.dreamstime.com/b/print-173909015.jpg">
+            <h1 class="text-xl font-bold">CMS(Student)</h1>
+        </div>
+        <nav class="mt-2">
+            <ul>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700">Profile Management</a></li>
+                <li><a href="userschedule.html" class="block px-4 py-2 hover:bg-gray-700">Class Schedule</a></li>
+                <li><a href="userNotice.html" class="block px-4 py-2 hover:bg-gray-700">Notice Board</a></li>
+                <li><a href="userMail.html" class="block px-4 py-2 hover:bg-gray-700">Collage Mail</a></li>
+                <li><a href="userAdmit.html" class="block px-4 py-2 hover:bg-gray-700">Admit-card</a></li>
+                <li><a href="usergrade.html" class="block px-4 py-2 hover:bg-gray-700">Grade view</a></li>
+                <li><a href="userMap.html" class="block px-4 py-2 hover:bg-gray-700">Location</a></li>
+                <li><a href="userteacherfeedbask.html" class="block px-4 py-2 hover:bg-gray-700">Teaching Feedback</a></li>
+                <li><a href="userCodeOfConduct.html" class="block px-4 py-2 hover:bg-gray-700">Code of Conduct</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+        <header class="flex justify-between items-center">
+            <h2 class="text-2xl font-bold">Welcome back!</h2>
+
+        </header>
+
+        <div class="mt-8">
+            <!-- Dashboard Cards -->
+            <div class="grid grid-cols-4 gap-4">
+                <div class="p-4 bg-gray-800 rounded">
+                    <h3 class="text-lg font-bold">160</h3>
+                    <p class="text-sm">Total Class 116</p>
+                </div>
+                <div class="p-4 bg-gray-800 rounded">
+                    <h3 class="text-lg font-bold">6</h3>
+                    <p class="text-sm">Total Subject</p>
+                </div>
+
+                <div class="p-4 bg-gray-800 rounded">
+                    <h3 class="text-lg font-bold text-green-500">৳ 0.00</h3>
+                    <p class="text-sm">Advanced Payment</p>
+                </div>
+            </div>
+
+            <!-- Basic Information -->
+            <div class="mt-8 bg-gray-800 p-6 rounded">
+                <h3 class="text-xl font-bold">Basic Information</h3>
+                <div class="flex justify-between mt-4">
+                    <div>
+                        <h4 class="text-lg font-bold">Golam Rabby</h4>
+                        <p>Batch: 59</p>
+                        <p>BSc in CSE</p>
+                        <button class="mt-2 px-4 py-2 bg-blue-600 rounded">View Full Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
