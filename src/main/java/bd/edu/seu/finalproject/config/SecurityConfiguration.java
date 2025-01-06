@@ -2,6 +2,7 @@ package bd.edu.seu.finalproject.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,8 +15,11 @@ class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login", "/registration", "/admit-card", "/css/**", "/js/**").permitAll() // Allow access to registration page
-                        .anyRequest().authenticated() // Protect all other endpoints
+                        .requestMatchers("/login", "/registration", "/register", "/admit-card",
+                                "/code-of-conduct", "/notice", "/grade", "/mail", "/feedback",
+                                "/location", "/schedule", "/studentlist", "/css/**", "/js/**").permitAll()
+                        .requestMatchers("/dashboard").authenticated()
+                        .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
@@ -28,6 +32,15 @@ class SecurityConfig {
                         .logoutUrl("/logout")
                         .logoutSuccessUrl("/login?logout=true")
                         .permitAll()
+                )
+                .sessionManagement(session -> session
+                        .invalidSessionUrl("/login?session=invalid")
+                        .maximumSessions(1)
+                        .expiredUrl("/login?session=expired")
+                )
+                .csrf(csrf -> csrf.disable())
+                .headers(headers -> headers
+                        .cacheControl(cache -> cache.disable())
                 );
 
         return http.build();
