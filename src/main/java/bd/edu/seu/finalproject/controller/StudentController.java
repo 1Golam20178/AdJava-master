@@ -14,12 +14,7 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    /**
-     * Endpoint to register a new student.
-     *
-     * @param student The student object with email and password.
-     * @return A success message if the student is registered, or an error message if email is already in use.
-     */
+
     @PostMapping("/register")
     public ResponseEntity<?> registerStudent(@RequestBody Student student) {
         try {
@@ -30,13 +25,7 @@ public class StudentController {
         }
     }
 
-    /**
-     * Endpoint to authenticate a student.
-     *
-     * @param email The email of the student.
-     * @param password The password of the student.
-     * @return A success or failure message based on authentication.
-     */
+
     @PostMapping("/login")
     public ResponseEntity<?> authenticateStudent(@RequestParam String email, @RequestParam String password) {
         boolean isAuthenticated = studentService.authenticateStudent(email, password);

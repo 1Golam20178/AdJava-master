@@ -8,30 +8,30 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController {
 
-    // Handle Registration Form Submission
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
+
     @PostMapping("/registration")
     public String handleRegistration(String username, String password, String email, Model model) {
 
-        System.out.println("hello");
+
 
         if ("admin@cms.com".equals(email) && "123".equals(password)) {
             model.addAttribute("message", "Welcome, " + email + "!");
+            System.out.println("login admin");
             return "adminDashboard"; // Redirect to a dashboard page
         }
-        // Perform validation and save user data
-        // For demonstration, we just add a message
+
         model.addAttribute("successMessage", "User registered successfully!");
+        System.out.println("login student");
         return "userDashboard"; // Redirect to login page after registration
     }
 
-    // Display the login page
-    @GetMapping("/login")
-    public String showLoginPage() {
-        return "login"; // The login.html file in src/main/resources/templates
-    }
 
-    // Handle login form submission
-    @PostMapping("/login")
+
+/*    @PostMapping("/login")
     public String handleLogin(String email, String password,
             Model model) {
         System.out.println("Hello1");
@@ -45,7 +45,7 @@ public class LoginController {
         // If login fails, display an error message
         model.addAttribute("error", "Invalid email or password!");
         return "login"; // Reload the login page with an error message
-    }
+    }*/
 
     /*@GetMapping("/registration")
     public String aboutPage(Model model) {
